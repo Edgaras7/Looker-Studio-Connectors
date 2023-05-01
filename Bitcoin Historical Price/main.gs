@@ -129,8 +129,10 @@ function getSchema(request) {
 // https://developers.google.com/datastudio/connector/reference#getdata
 function getData(request) {
   var apiKey = request.configParams.apiKeyInput;
-  var dayLimit = parseInt(request.configParams.dayLimit);
-  var url = "https://min-api.cryptocompare.com/data/v2/histoday?fsym=BTC&tsym=USD&limit="+dayLimit+"&api_key="+apiKey;
+  var dayLimit = parseInt(request.configParams.dayLimit); 
+  var currencyInput = parseInt(request.configParams.currencyInput);
+
+  var url = "https://min-api.cryptocompare.com/data/v2/histoday?fsym=BTC&tsym="+currencyInput+"&limit="+dayLimit+"&api_key="+apiKey;
   var response = UrlFetchApp.fetch(url);
   var json = response.getContentText();
   var data = JSON.parse(json).Data.Data;

@@ -1,0 +1,18 @@
+{
+  "timeZone": "",
+  "dependencies": {
+    "libraries": []
+  },
+  "dataStudio": {
+    "name": "Bitcoin Historical Price",
+    "logoUrl": "bitcoin-logo-6-1.png",
+    "company": "Test Company",
+    "companyUrl": "https://test/",
+    "addonUrl": "https://test/",
+    "supportUrl": "https://test/",
+    "description": "Get bitcoin price using JSON and cryptocompare.com API" 
+  },
+  "oauthScopes": [
+    "https://www.googleapis.com/auth/script.external_request"
+  ]
+} 
